@@ -1,5 +1,10 @@
 /* app css stylesheet */
-
+.blue-background{
+  background-color: #E1F5FE;
+}
+.homepage-outer{
+  padding: 3px;
+}
 .menu {
   list-style: none;
   margin-bottom: 15px;
@@ -16,20 +21,19 @@
 .menu-mobile{
   text-decoration: none;
   text-align: left;
-  /* border: 1px solid; */
-  background-color: #d4d4d4;
-  /* border-radius: 4px; */
-  width: 100%;
+  background-color: #154360;
   list-style: none;
   margin-bottom: 15px;
   margin-top: 0px;
   padding: 0 5px 5px;
-  /* position: relative; */
-  /* text-decoration: none; */
   font-family: "Font Awesome";
+  color: #ffffff;
   font-size: 20px;
   overflow: hidden;
-
+  border-radius: 4px;
+}
+.menu-mobile:hover{
+  text-decoration: none;
 }
 .menu:hover {
 
@@ -61,20 +65,22 @@
   height: 33px;
   display: block;
 }
+.menu-item:hover{
+  text-decoration: none;
+}
 .menu-item-mobile{
   padding: 0 5px 5px;
   text-decoration: none;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-  transform: scale(1);
-  height: 33px;
   display: block;
+  color: #ffffff;
 }
-.menu-item:hover {
-  font-color: "blue";
+.menu-item-mobile:hover{
+  background-color: #2874A6;
+  text-decoration: none;
+  color: #ffffff;
+}
 
 
-}
 
 .menu-button{
   padding: 0 5px 5px;
@@ -86,58 +92,106 @@
   display: none;
 
 }
+.menu-button-mobile
+{
+  color: #ffffff;
+}
 .nav-menu-bar{
 
-
+  background-color: #D6EAF8;
+  border-radius: 4px;
 
 }
 .view-area
 {
   display: inline-block;
-  background-color: aliceblue;
-  border: 1px;
-  width: 400px;
-  height: 300px;
-}
-
-.menu-wrapper{
-  display: inline;
   background-color: transparent;
+  border: 1px;
+  width: 100%;
 }
-.menu-wrapper-mobile{
-  display: block;
-  background-color: #cccccc;
-  width: 50%;
-  height: 100%;
+.homepage{
+  display: inline;
+}
+#myCarousel{
   position: absolute;
-  /* float: left; */
-  top: 28px;
-  border-color: TRANSPARENT;
-  /* overflow: auto; */
-  opacity: 0.5;
-  text-decoration: none;
-  border-radius: 5px;
-  /* text-transform: uppercase; */
-  padding-left: 5px;
-  transition: visibility 0s linear 1s;
+  width: fit-content;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
 }
-
+.carousel-arrows{
+  position: relative;
+  top: 174px;
+}
+.booking-form{
+  /* display: inline-block; */
+  background-color: #D6EAF8;
+  padding: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  margin: 50px;
+  vertical-align: top;
+  border-radius: 10px;
+  font-family: "Font Awesome";
+  font-size: 20px;
+}
+.form-control{
+  background-color: #2aabd2;
+}
+.checkin-date:before{
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+  width: 100%;
+}
+.checkin-date:focus:before,.checkin-date:hover:before,
+.checkin-date:valid:before{
+  content: "";
+  /*width: 0%;*/
+  display: none;
+}
+.checkin{
+  position: relative;
+  float: right;
+  top: -28px;
+  vertical-align: baseline;
+  padding: 4px;
+}
+.form-container{
+  position: relative;
+  float: right;
+  margin-top: 8px;
+}
 
 @media only screen and (max-width: 767px) {
   .menu-button {
     display: block;
   }
-  .menu-button:active .menu-wrapper-mobile{
 
-    display: block;
-    background-color:#cccccc;
-    width: 50%;
-    height:50%;
-
-
+  .menu-button:active{
+    color: #ffffff;
   }
+
   .menu-item{
     display: none;
+  }
+  #myCarousel{
+    postion: relative;
+  }
+  .form-container{
+    position: relative;
+    margin-top: 250px;
+  }
+  .booking-form{
+    background-color: #AED6F1;
+    padding: 30px;
+    text-align: center;
+    margin: 40px;
+    vertical-align: top;
+    padding-bottom: 50px;
+  }
+  body{
+    font-size: 12px;
   }
 }
 

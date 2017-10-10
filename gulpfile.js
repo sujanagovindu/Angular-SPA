@@ -21,21 +21,27 @@ var path = {
 ,
     HTML: [
         'app/home/home.html',
+        'app/hnr/hnr.html',
         'app/view2/view2.html',
         'app/index.html'
     ],
     JS: [
         'app/app.js',
         'app/home/*.js',
+        'app/hnr/*.js',
         'app/view2/*.js'
 
     ],
     CSS: [
         'app/app.css',
-        'app/bower_components/bootstrap/dist/css/bootstrap.css'
+        'app/bower_components/bootstrap/dist/css/bootstrap.css',
+        'app/bower_components/font-awesome/css/font-awesome.min.css'
     ],
     IMG: [
-        ''
+        'app/assets/HyamsBeach.jpg',
+        'app/assets/IMG_0134.JPG',
+        'app/assets/IMG_0135.JPG',
+        'app/assets/IMG_0136.JPG'
     ],
     VENDOR: [
         'app/bower_components/angular/angular.js',
@@ -45,6 +51,7 @@ var path = {
         'app/bower_components/html5-boilerplate/src/js/vendor/modernizr-2.8.3.min.js',
         'app/bower_components/bootstrap/dist/js/bootstrap.js',
         'app/bower_components/jquery/dist/jquery.js'
+
         // ...and more
     ],
     DIST: './dist'
@@ -62,7 +69,7 @@ gulp.task('connect', ['build'], function() {
     // });
 });
 
-gulp.task('build', ['lint', 'css', 'vendor', 'js', 'html','copyLibs', 'watch'] );
+gulp.task('build', [ 'css', 'vendor', 'js', 'html','copyLibs','img', 'watch'] );
 
 
 /* spin up distribution server */
@@ -147,6 +154,6 @@ gulp.task('watch', function () {
     //gulp.watch(path.IMG,{usePolling: true}, ['img']);
 });
 /* defualt */
-var all_tasks = ['lint', 'css', 'vendor', 'js', 'html', 'img'];
+var all_tasks = [ 'css', 'vendor', 'js', 'html', 'img'];
 gulp.task('default', all_tasks);
 

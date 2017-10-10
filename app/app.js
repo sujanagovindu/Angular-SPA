@@ -5,6 +5,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.home',
+    'myApp.hnr',
   'myApp.view2'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
@@ -18,6 +19,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
       .when('/view2', {
           templateUrl: 'view2/view2.html',
           controller: 'View2Ctrl'
+      })
+      .when('/hnr', {
+          templateUrl: 'hnr/hnr.html',
+          controller: 'HnrCtrl'
       })
   .otherwise({redirectTo: '/home'});
 }])
@@ -36,11 +41,13 @@ function AppCtrl($scope, $rootScope, $document, $window) {
         if($scope.menuClicked){
             $scope.menuClass= 'menu-mobile';
             $scope.menuItemClass='menu-item-mobile';
+            $scope.menuButtonClass='menu-button-mobile';
         }else{
             $scope.menuClass= 'menu';
+            $scope.menuButtonClass='menu-button';
         }
 
-        //console.log("in menu press");
+        console.log("in menu press");
         // var element = $document.getElementById("ul-menu");
         //
         // //element.classList.toggle("menu-wrapper-mobile");

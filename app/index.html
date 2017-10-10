@@ -11,9 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link data-require="bootstrap@3.0.0" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -23,21 +27,23 @@
   <script src="angular-loader.js"></script>
   <script src="angular-route.js"></script>
   <script src="angular-mocks.js"></script>
-    <script src="bootstrap.js"></script>
     <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="modernizr-2.8.3.min.js"></script>
+
 
 
 </head>
-<body class="container">
+<body class="container blue-background">
 <div class=""  height="45px" ng-controller="AppCtrl">
     <nav class="nav-menu-bar" id="menuBar" height="45px" aria-expanded="false">
   <ul id="ul-menu"  ng-class="menuClass">
-      <li> <a class="menu-button" href="#" ><i class="icon-align-justify" ng-click="onMenuPress(menuClicked)"></i></a></li>
+      <li> <a ng-class="menuButtonClass" href="#" ><i class="icon-align-justify" ng-click="onMenuPress(menuClicked)"></i></a></li>
       <li><a ng-class="menuItemClass" href="#/home">Home</a></li>
-      <li><a ng-class="menuItemClass" href="#/view2">Features</a><li>
-      <li><a ng-class="menuItemClass" href="#/view2">Portfolio</a></li>
-      <li><a ng-class="menuItemClass" href="#/view2">Catalogue</a></li>
-      <li><a ng-class="menuItemClass" href="#/view2">Shop</a></li>
+      <li><a ng-class="menuItemClass" href="#/hnr">Hotels & Resorts</a><li>
+      <li><a ng-class="menuItemClass" href="#/view2">Events</a></li>
+      <li><a ng-class="menuItemClass" href="#/view2">Experience</a></li>
+      <li><a ng-class="menuItemClass" href="#/view2">Contact us</a></li>
   </ul>
 </nav>
 </div>
@@ -57,7 +63,7 @@
 
 
 <!---<script src="home/home.js"></script>
-<script src="view2/view2.js"></script>
+<script src="view2/hnr.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>--->
